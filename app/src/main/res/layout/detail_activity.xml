@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="#fff"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <Button
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/back"
+                android:backgroundTint="#428df5" />
+
+            <TextView
+                android:id="@+id/appBarText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Запись на стене"
+                android:textSize="23sp"
+                android:textColor="#000"
+                />
+
+            <ImageView
+                android:id="@+id/detail_btn_more"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:src="@drawable/button_more"
+                android:layout_marginLeft="85dp"
+                android:layout_marginTop="20dp"
+                android:tint="#428df5"
+                />
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBar"
+        android:layout_above="@+id/bottom_bar"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/detail_user_pic"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/profile1"
+                            android:layout_marginLeft="5dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/detail_user_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="GroupName GroupName"
+                            android:layout_marginLeft="70dp"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textSize="16sp"
+                            android:textColor="#000"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/detail_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="time 0:00"
+                            android:layout_marginLeft="70dp"
+                            android:layout_marginTop="25dp"
+                            />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/detail_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:text="texttext"
+                android:layout_marginLeft="15dp"
+                />
+
+            <ImageView
+                android:id="@+id/detail_uploader_pic"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:src="@drawable/post1" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/detail_liked_person_1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/profile2"
+                    android:layout_marginLeft="20dp"
+                    />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/detail_liked_person_2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/profile3"
+                    android:layout_marginLeft="10dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/detail_liked_cnt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Понравилось 193 людям"
+                    android:textColor="#8a8a8a"
+                    android:textSize="12sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="2dp"
+                    />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="15dp"
+                android:paddingLeft="10dp">
+
+                <ImageView
+                    android:id="@+id/detail_like"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:background="@drawable/heart"
+                    android:backgroundTint="#707070"
+                    />
+
+                <TextView
+                    android:id="@+id/detail_like_cnt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="111"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginLeft="5dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/detail_share"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/share"
+                    android:tint="#707070"
+                    android:layout_marginLeft="30dp"
+                    />
+
+                <TextView
+                    android:id="@+id/detail_share_cnt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="111"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginLeft="5dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/detail_view"
+                    android:layout_width="11dp"
+                    android:layout_height="11dp"
+                    android:src="@drawable/view"
+                    android:tint="#b0b0b0"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="180dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/detail_view_cnt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="111"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginLeft="5dp"
+                    />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:background="#fff"
+        android:layout_alignParentBottom="true"
+        android:layout_height="40dp">
+
+        <ImageView
+            android:id="@+id/detail_add_file"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/clip"
+            android:tint="#b0b0b0"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            />
+
+        <EditText
+            android:id="@+id/detail_comment"
+            android:layout_width="260dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="5dp"
+            android:background="@null"
+            android:textSize="15sp"
+            android:hint="Комментарий"
+            android:fontFamily="sans-serif-medium"
+            />
+        <ImageView
+            android:id="@+id/detail_sticker"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_smile_outline_28"
+            android:tint="#b0b0b0"
+            android:layout_marginLeft="270dp"
+            />
+
+        <ImageView
+            android:id="@+id/detail_sent_btn"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_send_28"
+            android:tint="#b0b0b0"
+            android:layout_marginLeft="320dp"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
